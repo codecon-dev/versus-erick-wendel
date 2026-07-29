@@ -1,0 +1,23 @@
+{
+  "name": "versus-erick-wendel",
+  "version": "0.0.1",
+  "description": "Erick Wendel sem teclado vs. 3 júniors — 2 horas pra fazer uma bilheteria aguentar 10 mil pessoas brigando por 100 ingressos.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start":"node index.js",
+    "dev":"node --watch index.js",
+    "test": "NODE_ENV=test node --watch index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codecon-dev/versus-erick-wendel.git"
+  },
+  "keywords": [],
+  "author": "Erick Wendel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codecon-dev/versus-erick-wendel/issues"
+  },
+  "homepage": "https://github.com/codecon-dev/versus-erick-wendel#readme"
+}
