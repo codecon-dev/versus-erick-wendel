@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+  api01:
+    hostname: api01
+    build: .
+    environment:
+      DB_HOST: mongodb
+      DB_NAME: customers
+    ports:
+      - "9999:9999"
+    command: npm run test
+    # command: npm run test:dev
+    # command: npm run start
+    volumes:
+      - .:/src
+      - nodemodules:/src/node_modules
+
+volumes:
+  nodemodules: {}
