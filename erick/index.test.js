@@ -36,7 +36,7 @@ describe('subject', () => {
 
     test('test2 - 409', async () => {
         const port = server.address().port
-        for (let index = 0; index < 80; index++) {
+        for (let index = 0; index < 100; index++) {
             const r = await fetch(`http://localhost:${port}/reservations`, {
                 method: "POST",
                 body: JSON.stringify({

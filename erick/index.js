@@ -35,8 +35,8 @@ const app = createServer(async (req, res) => {
         const indexes = []
         // for (let index = 0; index < quantity; index++) {
         const av = tickets
-            .filter((t) => t.status === 'AV')
-            .map((t, index) => ({ ...t, index }))
+            .map((ticket, index) => ({ ...ticket, index }))
+            .filter((ticket) => ticket.status === 'AV')
             .slice(0, quantity)
 
         // console.log('quantity', quantity, av.length)
@@ -51,7 +51,7 @@ const app = createServer(async (req, res) => {
         let reserv = { reservation_id: randomUUID(), quantity: 0, tickets: [] }
 
         for (const i of av) {
-        // console.log('SOLD*99', i.index)
+            // console.log('SOLD*99', i.index)
 
             tickets[i.index] = {
                 ...tickets[i.index],
@@ -78,7 +78,7 @@ const app = createServer(async (req, res) => {
     res.end('not found');
 })
 
-app.once('listening', () => init())
+app.on('listening', () => init())
 // app.once('close', () => init())
 
 if (!isTest) {
