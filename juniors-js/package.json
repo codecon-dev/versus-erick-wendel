@@ -1,0 +1,16 @@
+{
+    "name": "bilheteria",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon batch.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.14"
+        "express": "^5.2.1",
+        "express-batch-requests": "^1.0.4"
+      }
+}
